@@ -54,7 +54,7 @@ export default function Navbar() {
       </div>
       {/* Mobile menu */}
       <div
-        className={`fixed p-4 top-0 left-0 w-3/4 h-full bg-white shadow-md transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:hidden`}
+        className={`z-20 fixed p-4 ps-8 top-0 left-0 w-3/4 h-full bg-white shadow-md transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:hidden`}
       >
         <div className="flex justify-end">
           <button onClick={toggleMenu}>
@@ -62,11 +62,11 @@ export default function Navbar() {
           </button>
         </div>
         <ul className="flex flex-col items-start mt-8 gap-4">
-          <li><a href="/" className="font-bold text-[#045A5C] py-2" onClick={toggleMenu}><div className='bg-[#28E3E9] w-[10px] h-[16px] rounded-tl-[16px] rounded-br-[16px] mr-1' />Rezept einlösen</a></li>
-          <li><a href="/" className="text-[#045A5C] py-2" onClick={toggleMenu}><div className='bg-[#62C3C6] opacity-50 w-[10px] h-[16px] rounded-tl-[16px] rounded-br-[16px] mr-1' />Live Bestand</a></li>
-          <li><a href="/" className="text-[#045A5C] py-2" onClick={toggleMenu}><div className='bg-[#62C3C6] opacity-50 w-[10px] h-[16px] rounded-tl-[16px] rounded-br-[16px] mr-1' />Videosprechstunde</a></li>
-          <li><a href="/" className="text-[#045A5C] py-2" onClick={toggleMenu}><div className='bg-[#62C3C6] opacity-50 w-[10px] h-[16px] rounded-tl-[16px] rounded-br-[16px] mr-1' />FAQs</a></li>
-          <li><a href="/" className="text-[#045A5C] py-2" onClick={toggleMenu}><div className='bg-[#62C3C6] opacity-50 w-[10px] h-[16px] rounded-tl-[16px] rounded-br-[16px] mr-1' />Kontakt</a></li>
+          <li><a href="/" className="font-bold text-[#045A5C] py-2 flex items-center" onClick={toggleMenu}><div className='bg-[#28E3E9] w-[10px] h-[16px] rounded-tl-[16px] rounded-br-[16px] mr-1' />Rezept einlösen</a></li>
+          <li><a href="/" className="text-[#045A5C] py-2 flex items-center" onClick={toggleMenu}><div className='bg-[#62C3C6] opacity-50 w-[10px] h-[16px] rounded-tl-[16px] rounded-br-[16px] mr-1' />Live Bestand</a></li>
+          <li><a href="/" className="text-[#045A5C] py-2 flex items-center" onClick={toggleMenu}><div className='bg-[#62C3C6] opacity-50 w-[10px] h-[16px] rounded-tl-[16px] rounded-br-[16px] mr-1' />Videosprechstunde</a></li>
+          <li><a href="/" className="text-[#045A5C] py-2 flex items-center" onClick={toggleMenu}><div className='bg-[#62C3C6] opacity-50 w-[10px] h-[16px] rounded-tl-[16px] rounded-br-[16px] mr-1' />FAQs</a></li>
+          <li><a href="/" className="text-[#045A5C] py-2 flex items-center" onClick={toggleMenu}><div className='bg-[#62C3C6] opacity-50 w-[10px] h-[16px] rounded-tl-[16px] rounded-br-[16px] mr-1' />Kontakt</a></li>
         </ul>
         <div className="flex items-center gap-4 mt-8">
           <button type="button" className="flex items-center">
