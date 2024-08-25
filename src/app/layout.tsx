@@ -22,8 +22,8 @@ export default function RootLayout({
         <div className="md:w-10/12 mx-auto md:py-[70px]">
           <Navbar />
           {children}
-          <Footer />
         </div>
+        <Footer />
       </body>
     </html>
   );
