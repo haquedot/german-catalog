@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { Range } from 'react-range';
-import {  IconFilter, IconMinus, IconChevronDown, IconChevronUp, IconX } from "@tabler/icons-react";
-import { Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/react';
+import { IconFilter, IconMinus, IconChevronDown, IconChevronUp, IconX } from "@tabler/icons-react";
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 
 
 
@@ -32,13 +32,18 @@ export default function Filter() {
 
     return (
         <>
-            <div className="md:w-3/12">
+            <div className="md:w-3/12 relative w-full">
                 <h2 className='w-full hidden md:block bg-[#E2F1F1] text-center py-1 rounded-[4px] text-[#045A5C] font-bold md:mb-10'>Filter</h2>
-                <button type="button" className='md:hidden bg-[#E2F1F1] text-[#045A5C] p-2 rounded-md block ms-auto' onClick={toggleModal}>
+
+                <button
+                    className={`md:hidden bg-[#E2F1F1] text-[#045A5C] p-2 rounded-md block ms-auto`}
+                    onClick={toggleModal}
+                >
                     <IconFilter />
                 </button>
+                <div className={`${showModal ? 'block' : 'hidden'} absolute md:relative bg-white w-full mx-auto mt-2 p-4 py-8 md:m-0 md:p-0 border-2  border-[#045A5C] md:border-0 rounded-lg md:rounded-0 max-h-[420px] md:max-h-full overflow-y-auto md:overflow-hidden md:block mb-5`}>
+                    <h2 className='w-full md:hidden bg-[#E2F1F1] text-center py-1 rounded-[4px] text-[#045A5C] font-bold mb-4'>Filter</h2>
 
-                <div className={`${showModal ? 'block' : 'hidden'} md:block mb-5`}>
                     <div className="w-full">
                         <label className="block text-center font-medium text-[#365758] mb-4">Preis</label>
                         <Range
@@ -257,21 +262,21 @@ export default function Filter() {
                     <hr className='border-[#E2F1F1] my-10' />
                     <div className="w-full flex flex-col items-center">
                         <h2 className="text-lg font-semibold text-gray-700 mb-4">Genetik</h2>
-                        <div className="w-full flex gap-2">
+                        <div className="x:flex">
                             <button
-                                className={`w-full px-4 py-1 rounded ${buttonClasses('Indica')}`}
+                                className={`w-min px-4 py-1 mb-3 mr-2 rounded ${buttonClasses('Indica')}`}
                                 onClick={() => handleClick('Indica')}
                             >
                                 Indica
                             </button>
                             <button
-                                className={`w-full px-4 py-1 rounded ${buttonClasses('Sativa')}`}
+                                className={`w-min px-4 py-1 mb-3 mr-2 rounded ${buttonClasses('Sativa')}`}
                                 onClick={() => handleClick('Sativa')}
                             >
                                 Sativa
                             </button>
                             <button
-                                className={`w-full px-4 py-1 rounded ${buttonClasses('Hybrid')}`}
+                                className={`w-min px-4 py-1 mb-3 rounded ${buttonClasses('Hybrid')}`}
                                 onClick={() => handleClick('Hybrid')}
                             >
                                 Hybrid
@@ -282,15 +287,15 @@ export default function Filter() {
                     <hr className='border-[#E2F1F1] my-10' />
                     <div className="w-full flex flex-col items-center">
                         <h2 className="text-lg font-semibold text-gray-700 mb-4">Bestrahltung</h2>
-                        <div className="w-full flex gap-2">
+                        <div className="xl:flex">
                             <button
-                                className={`px-4 py-1 rounded ${buttonClasses('bestrahlt')}`}
+                                className={`w-min px-4 py-1 rounded mb-3 mr-2 ${buttonClasses('bestrahlt')}`}
                                 onClick={() => handleClick('bestrahlt')}
                             >
                                 bestrahlt
                             </button>
                             <button
-                                className={`w-full px-4 py-1 rounded ${buttonClasses('nicht')}`}
+                                className={`w-max px-4 py-1 rounded mb-3 ${buttonClasses('nicht')}`}
                                 onClick={() => handleClick('nicht')}
                             >
                                 nicht bestrahlt

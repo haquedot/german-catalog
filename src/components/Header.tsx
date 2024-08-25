@@ -26,7 +26,7 @@ export default function Header() {
             </div>
 
             {/* Filter Section */}
-            <div className="w-full md:flex justify-between mb-10">
+            <div className="w-full xl:flex justify-between mb-10">
                 <h1 className="mb-4 text-[#116A6C] text-4xl font-bold flex items-center">
                     <div className='bg-[#28E3E9] w-[20px] h-[26px] rounded-tl-[20px] rounded-br-[20px] mr-5' />Blüten
                 </h1>
@@ -48,7 +48,7 @@ export default function Header() {
 
                             {/* Sort Dropdown */}
                             <Menu as="div" className="relative inline-block text-left">
-                                <div>
+                                <div className="w-max">
                                     <MenuButton className="group inline-flex justify-center text-sm font-semibold text-[#365758] rounded-[4px] bg-[#C9EBEC] p-3 hover:text-gray-900">
                                         Sortieren nach
                                         <IconChevronDown
@@ -85,7 +85,7 @@ export default function Header() {
 
                             {/* Availability Toggle */}
                             <button type="button"
-                                className="w-min flex items-center justify-center font-semibold text-[#365758] block rounded-[4px] bg-[#C9EBEC] p-2 px-3 shadow-sm text-xs sm:max-w-xs sm:text-sm sm:leading-6"
+                                className="w-min flex items-center justify-center text-sm font-semibold text-[#365758] block rounded-[4px] bg-[#C9EBEC] p-2 px-3 shadow-sm text-xs sm:max-w-xs sm:text-sm sm:leading-6"
                             >
                                 Verfügbarkeit
                                 <label className="inline-flex items-center cursor-pointer ps-2">
